@@ -27,7 +27,25 @@ Auth
 ## Instalasi
   1.Clone Repositori
 
-  git clone 
-## License
+  git clone https://github.com/ayeshasf/ukk1.git
+  Composer Install
+  cp .env.example .env
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+  2.Konfigurasi Database pada file .env
+  
+  APP_DEBUG=true
+  DB_DATABASE=
+  DB_USERNAME=
+  DB_PASSWORD=
+
+  3.Melakukan Migrasi dan menyambungkan storage
+
+  php artisan key:generate
+  php artisan storage:link
+  php artisan migrate
+  
+  4.Memulai Situs Web
+
+  php artisan serve
+
+UKK Toko dibuat oleh Ayesha Surya Fazira
