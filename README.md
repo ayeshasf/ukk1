@@ -25,27 +25,30 @@ Auth
   Web Brose (Chrome)
 
 ## Instalasi
-  1.Clone Repositori
+0.Clone Repository
 
-  git clone https://github.com/ayeshasf/ukk1.git
-  Composer Install
-  cp .env.example .env
+git clone
 
-  2.Konfigurasi Database pada file .env
-  
-  APP_DEBUG=true
-  DB_DATABASE=
-  DB_USERNAME=
-  DB_PASSWORD=
+  1 . Install atau Update composer
 
-  3.Melakukan Migrasi dan menyambungkan storage
+composer install
 
-  php artisan key:generate
-  php artisan storage:link
-  php artisan migrate
-  
-  4.Memulai Situs Web
+2. Konfigurasikan file .env dan Databasenya
 
-  php artisan serve
+APP_DEBUG=true
+DB_DATABASE=nama_database
+DB_USERNAME=root
+DB_PASSWORD=
+
+3. Melakukan Migrasi dan menyambungkan storage
+
+php artisan key:generate
+php artisan storage:link
+php artisan migrate
+
+4. Mulai Situs Web
+
+php artisan serve
+
 
 UKK Toko dibuat oleh Ayesha Surya Fazira
