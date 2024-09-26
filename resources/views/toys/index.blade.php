@@ -30,7 +30,10 @@
 </head>
 <body>
     <div class="container mt-5">
-        <a href="{{ route('login') }}" class="btn btn-primary btn-login">Login as Admin</a>
+        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-danger">Logout</a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
         <h2 class="text-center mb-4">Available Toys</h2>
         <div class="row">
             @foreach($toys as $toy)
@@ -39,14 +42,18 @@
                         <h5 class="card-title">{{ $toy->name }}</h5>
                         <p class="card-text">{{ $toy->description }}</p>
                         <p class="card-text"><strong>Price: </strong>${{ $toy->formatted_price }}</p>
+                        <form action="{{ route('cart.add') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="id" value="{{ $toy->id }}">
+                            <input type="hidden" name="name" value="{{ $toy->name }}">
+                            <input type="hidden" name="price" value="{{ $toy->price }}">
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </form>
                     </div>
                 </div>
             @endforeach
         </div>
         @if($toys->count() < 4)
-            <div class="alert alert-warning mt-3">
-                Currently, there are not enough toys available.
-            </div>
         @endif
     </div>
 </body>

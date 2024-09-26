@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ToyController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\Auth\LoginController;
 
 
@@ -21,7 +22,7 @@ use App\Http\Controllers\Auth\LoginController;
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('', [ToyController::class, 'index'])->name('home');
+Route::get('', [LoginController::class, 'showLoginForm'])->name('login');
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
@@ -31,8 +32,16 @@ Route::get('toys', [ToyController::class, 'index'])->name('toys.index');
     Route::post('toys', [ToyController::class, 'store'])->name('toys.store');
     Route::get('toys/{toy}/edit', [ToyController::class, 'edit'])->name('toys.edit');
     Route::put('toys/{toy}', [ToyController::class, 'update'])->name('toys.update');
-    Route::delete('toys/{toy}', [ToyController::class, 'destroy'])->name('toys.destroy');
-     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+    Route::delete('/admin/toys/{id}', [AdminController::class, 'destroy'])->name('admin.destroy');
+    Route::get('admin', [AdminController::class, 'index'])->name('admin.index');
+
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+     Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout');
+
+     Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
+     Route::delete('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
 
 
 

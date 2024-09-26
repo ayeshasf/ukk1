@@ -44,6 +44,11 @@ class AdminController extends Controller
         $toys = Toy::all(); // Ambil semua mainan
         return view('admin.dashboard', compact('toys')); // Kirim variabel $toys ke tampilan dashboard
     }
-
+    public function destroy($id)
+    {
+        $toy = Toy::findOrFail($id);
+        $toy->delete();
+        return redirect()->route('dashboard')->with('error', 'User tidak ditemukan.');
+    }
 
 }
