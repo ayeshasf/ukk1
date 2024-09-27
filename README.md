@@ -8,12 +8,12 @@ Visual Studio Code
 Auth
   login
 ## ERD
+![Uploading erd.jpg…]()
 
   
 
 ### UML
-
-![Screenshot (5)](https://github.com/user-attachments/assets/43f32097-7ee7-4744-bec7-0cbe845dfbd2)
+![uml](https://github.com/user-attachments/assets/c93fc4dc-1d47-4776-a5ae-c25a4c87f4d7)
 
 
 ## Teknologi Yang Di Gunakan
