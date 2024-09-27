@@ -7,13 +7,13 @@ Visual Studio Code
 ## fitur yang tersedia
 Auth
   login
-  register
 ## ERD
 
-
+  
 
 ### UML
 
+![Screenshot (5)](https://github.com/user-attachments/assets/43f32097-7ee7-4744-bec7-0cbe845dfbd2)
 
 
 ## Teknologi Yang Di Gunakan
