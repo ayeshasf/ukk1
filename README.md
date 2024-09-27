@@ -36,9 +36,16 @@ composer install
 
 2. Konfigurasikan file .env dan Databasenya
 
+
 APP_DEBUG=true
+
+
 DB_DATABASE=nama_database
+
+
 DB_USERNAME=root
+
+
 DB_PASSWORD=
 
 3. Melakukan Migrasi dan menyambungkan storage
