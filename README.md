@@ -18,7 +18,8 @@ Auth
 
 
 ## Teknologi Yang Di Gunakan
-  Laravel
+  Laravel 11
+  Boostrap
   
 ## Persaratan Untuk Melakukan Instalasi
   PHP
