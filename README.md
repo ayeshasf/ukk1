@@ -22,7 +22,11 @@ Auth
   
 ## Persaratan Untuk Melakukan Instalasi
   PHP
+
+  
   DATABASE (MariaDB)
+
+  
   Web Brose (Chrome)
 
 ## Instalasi
@@ -51,8 +55,14 @@ DB_PASSWORD=
 3. Melakukan Migrasi dan menyambungkan storage
 
 php artisan key:generate
+
+
 php artisan storage:link
+
+
 php artisan migrate
+
+
 
 4. Mulai Situs Web
 
