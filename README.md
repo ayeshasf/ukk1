@@ -59,4 +59,4 @@ php artisan migrate
 php artisan serve
 
 
-UKK Toko dibuat oleh Ayesha Surya Fazira
+UKK Toko Boneka dibuat oleh Ayesha Surya Fazira
